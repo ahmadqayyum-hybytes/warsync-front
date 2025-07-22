@@ -15,7 +15,7 @@ export default function CheckoutForm({ cartItems }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://<YOUR-BACKEND-PRIVATE-IP>:3000/place-order', {
+      await axios.post('http://localhost:3001/place-order', {
         ...form, products: cartItems, total
       });
       alert("Order placed successfully!");
